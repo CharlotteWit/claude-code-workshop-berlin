@@ -1,10 +1,12 @@
-import { kv } from "@vercel/kv";
+import { Redis } from "@upstash/redis";
 import { NextResponse } from "next/server";
+
+const redis = Redis.fromEnv();
 
 // GET /api/status — return all pump statuses
 export async function GET() {
   try {
-    const all = await kv.hgetall("pump-statuses");
+    const all = await redis.hgetall("pump-statuses");
     return NextResponse.json(all ?? {});
   } catch {
     return NextResponse.json({});
@@ -19,7 +21,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing name or status" }, { status: 400 });
     }
     const date = new Date().toLocaleDateString("de-DE");
-    await kv.hset("pump-statuses", { [name]: { status, date } });
+    await redis.hset("pump-statuses", { [name]: { status, date } });
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: "Database error" }, { status: 500 });
