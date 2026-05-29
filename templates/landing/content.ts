@@ -5,148 +5,135 @@
 // ────────────────────────────────────────────────────────────────
 
 export const business = {
-  name: "Hartmann Coffee Roasters",
-  shortName: "Hartmann",
-  tagline: "Small-batch coffee, roasted in Kreuzberg.",
+  name: "Wasserspielplätze Berlin",
+  shortName: "💧 Wasserspielplätze",
 };
 
 export const nav = {
   links: [
-    { label: "Services", href: "#services" },
-    { label: "How it works", href: "#how" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: "Spielplätze", href: "#playgrounds" },
+    { label: "Über uns", href: "#about" },
+    { label: "Tipp einsenden", href: "#submit" },
   ],
-  ctaLabel: "Order beans",
-  ctaHref: "#contact",
+  ctaLabel: "Spielplatz finden",
+  ctaHref: "#playgrounds",
 };
 
 export const hero = {
-  eyebrow: "Berlin · since 2018",
-  heading: "Coffee that tastes like someone made a choice.",
+  eyebrow: "🌞 Berlin · Sommer 2025",
+  heading: "Berlin's beste Spielplätze mit Wasserpumpe — in Sekunden gefunden.",
   subheading:
-    "We source single-origin beans from farms we've actually visited, roast them in small batches at our Kreuzberg studio, and deliver them to cafés and homes across Germany.",
-  ctaPrimary: { label: "Order beans", href: "#contact" },
-  ctaSecondary: { label: "See our services", href: "#services" },
+    "Es ist heiß, du hast ein schwitzigendes 4-jähriges Kind und 90 Minuten Zeit. Du willst einen Spielplatz mit Wasserpumpe, einer Toilette in der Nähe und am besten noch Eis. Diese Seite zeigt dir genau das — schnell.",
+  ctaPrimary: { label: "Spielplätze entdecken 🗺️", href: "#playgrounds" },
+  ctaSecondary: { label: "Tipp einsenden", href: "#submit" },
 };
 
-export const services = {
-  heading: "What we do",
-  intro:
-    "Three things, done seriously.",
+export const playgrounds = {
+  heading: "Spielplätze entdecken",
+  intro: "Klicke auf die Filter, um genau das zu finden, was du brauchst.",
   items: [
     {
-      title: "Wholesale roasting",
-      summary:
-        "Custom roast profiles for cafés and restaurants. We work with 23 venues across Berlin, Hamburg, and Munich. Weekly fresh delivery, transparent pricing.",
+      name: "Volkspark Prenzlauer Berg",
+      district: "Pankow",
+      hasPump: true,
+      hasToilet: true,
+      hasIceCream: true,
+      note: "Großer Sandbereich mit zwei Wasserpumpen. Eiswagen steht im Sommer täglich ab 12 Uhr direkt am Eingang.",
+      transport: "🚇 U2 Eberswalder Str., 5 Min. Fußweg",
     },
     {
-      title: "Direct-to-home subscriptions",
-      summary:
-        "Choose your beans, your frequency, and your grind. We ship within 48 hours of roasting. Pause or cancel anytime, no friction.",
+      name: "Görlitzer Park",
+      district: "Kreuzberg",
+      hasPump: true,
+      hasToilet: true,
+      hasIceCream: true,
+      note: "Belebt und beliebt. Wasserpumpe am Kinderspielbereich direkt neben dem Sommercafé.",
+      transport: "🚇 U1/U3 Görlitzer Bahnhof, direkt vor dem Eingang",
     },
     {
-      title: "Barista training",
-      summary:
-        "Two-day intensive workshops for new café staff. Covers extraction, milk technique, and how to taste. Held in our Kreuzberg studio one Saturday a month.",
+      name: "Rudolph-Wilde-Park",
+      district: "Schöneberg",
+      hasPump: true,
+      hasToilet: true,
+      hasIceCream: false,
+      note: "Ruhiger, gut gepflegter Park. Spielplatz mit Wasserpumpe in gutem Zustand, selten überfüllt.",
+      transport: "🚇 U4 Rathaus Schöneberg, 8 Min. Fußweg",
+    },
+    {
+      name: "Mauerpark",
+      district: "Prenzlauer Berg",
+      hasPump: true,
+      hasToilet: true,
+      hasIceCream: true,
+      note: "Sonntags Flohmarkt direkt nebenan. Wasserpumpe am Spielbereich gut erreichbar, mehrere Eisstände.",
+      transport: "🚇 U8 Bernauer Str., 10 Min. Fußweg",
+    },
+    {
+      name: "Viktoriapark",
+      district: "Kreuzberg",
+      hasPump: true,
+      hasToilet: false,
+      hasIceCream: true,
+      note: "Wasserpumpe direkt neben dem kleinen Wasserfall. Eisdiele am Parkeingang Kreuzbergstr.",
+      transport: "🚇 U6 Mehringdamm, 5 Min. Fußweg",
+    },
+    {
+      name: "Friedrichshain Park",
+      district: "Friedrichshain",
+      hasPump: true,
+      hasToilet: true,
+      hasIceCream: false,
+      note: "Toller Ausblick vom Hügel. Wasserpumpe am unteren Spielbereich, ruhiger als andere Parks.",
+      transport: "🚇 U5 Frankfurter Tor, 8 Min. Fußweg",
     },
   ],
 };
 
-export const howItWorks = {
-  heading: "How it works",
-  steps: [
-    {
-      title: "Tell us what you like",
-      summary:
-        "Bright and fruity? Deep and chocolatey? Send us a message or take our 60-second taste quiz.",
-    },
-    {
-      title: "We send a tasting flight",
-      summary:
-        "Three 100g bags, each from a different origin. €18 including shipping. No subscription required.",
-    },
-    {
-      title: "We dial in your favorite",
-      summary:
-        "Tell us which you preferred and we'll send 250g or 1kg bags of that one, roasted to order.",
-    },
-  ],
-};
-
-export const benefits = {
-  heading: "Why us, honestly",
+export const about = {
+  heading: "Warum diese Seite?",
   items: [
     {
-      title: "We taste everything we send",
+      title: "Weil Google dich im Stich lässt",
       summary:
-        "Every batch is cupped before it leaves the roastery. If we wouldn't drink it, you don't get it.",
+        "Wenn dein Kind im Juli Durst hat und du schnell einen Spielplatz mit laufender Wasserpumpe suchst, bekommst du Ergebnisse von 2018 und halbfertige Karten. Das wollten wir besser machen.",
     },
     {
-      title: "We know our farmers",
+      title: "Von Berliner Eltern, für Berliner Eltern",
       summary:
-        "We work directly with seven farms across Ethiopia, Colombia, and Honduras. Two of them we visit in person each year.",
+        "Ich bin Mama in Kreuzberg und habe diese Seite aus Frust gebaut — nach dem dritten Sommertag, an dem die Pumpe gesperrt war. Alle Infos kommen von echten Besuchen, nicht vom Schreibtisch.",
     },
     {
-      title: "We deliver fast or it's free",
+      title: "Immer aktuell",
       summary:
-        "Beans ship within 48 hours of roasting. If your order is late, we refund the shipping. We haven't had to do that in 14 months.",
+        "Die Community hilft mit. Wenn eine Pumpe kaputt ist oder ein neuer Spielplatz öffnet, schick uns einen Tipp. Wir halten die Liste frisch.",
     },
   ],
 };
 
 export const testimonials = {
-  heading: "What our customers say",
+  heading: "Was Eltern sagen",
   quotes: [
     {
-      text:
-        "We switched to Hartmann two years ago and our regulars notice. The roasts are consistent and Andre actually visits the café to taste with us. That's not normal.",
-      author: "Lina Brückner",
-      role: "Owner, Café Erna",
+      text: "Endlich eine Seite, die mir in 30 Sekunden sagt, wo wir hingehen können. Mein Sohn liebt den Görlitzer Park — die Pumpe läuft immer.",
+      author: "Julia M.",
+      role: "Mama, Kreuzberg",
     },
     {
-      text:
-        "I tried four roasters before settling on these guys. The Ethiopian Yirgacheffe they sent in March is the best coffee I've made at home.",
-      author: "Tomás Reiter",
-      role: "Home subscriber, Hamburg",
+      text: "Als Touristin mit Kind war das Gold wert. Ich wusste nicht, wo ich anfangen soll — diese Seite hat das Problem in 2 Minuten gelöst.",
+      author: "Sara K.",
+      role: "Besucherin aus Amsterdam",
     },
   ],
 };
 
-export const faq = {
-  heading: "Common questions",
-  items: [
-    {
-      q: "Do you ship outside Germany?",
-      a: "Yes — we ship across the EU. Delivery takes 3–5 business days. Shipping costs vary by country.",
-    },
-    {
-      q: "How fresh are the beans when they arrive?",
-      a: "Roasted within 48 hours of shipping. We recommend brewing them within 6 weeks of the roast date printed on the bag.",
-    },
-    {
-      q: "Can I pause my subscription?",
-      a: "Anytime. Log in, pause as long as you want, restart when you're ready. No questions asked.",
-    },
-    {
-      q: "Do you do training for individuals?",
-      a: "Our group workshops are for professional baristas, but we offer one-on-one sessions on request. Email us and we'll work out a date.",
-    },
-  ],
-};
-
-export const contact = {
-  heading: "Get in touch",
-  body:
-    "Wholesale questions, subscriptions, training enquiries — drop us a line. We reply within one business day.",
-  email: "hello@hartmann-coffee.example",
-  phone: "+49 30 1234 5678",
-  hours: "Mon–Fri · 09:00 — 17:00 CET",
-  address: "Oranienstraße 42, 10999 Berlin",
+export const submit = {
+  heading: "Spielplatz vorschlagen",
+  body: "Du kennst einen Spielplatz mit Wasserpumpe, der hier noch fehlt? Schick uns die Infos — wir prüfen und fügen ihn hinzu. Die Community dankt dir! 🙌",
+  email: "hallo@wasserspielplaetze-berlin.de",
 };
 
 export const meta = {
-  title: "Hartmann Coffee Roasters — Small-batch coffee, Kreuzberg",
+  title: "Wasserspielplätze Berlin — Spielplätze mit Wasserpumpe finden",
   description:
-    "Single-origin beans, custom roasts, and barista training in Berlin.",
+    "Berlins beste Spielplätze mit Wasserpumpen — gefiltert nach Toilette, Eis und Bezirk. Schnell, aktuell, von Eltern für Eltern.",
 };

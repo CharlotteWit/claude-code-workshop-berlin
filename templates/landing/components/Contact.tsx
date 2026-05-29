@@ -1,42 +1,22 @@
-import { contact } from "../content";
+import { submit } from "../content";
 
 export function Contact() {
   return (
-    <section id="contact" className="px-6 py-24">
-      <div className="max-w-4xl mx-auto">
+    <section id="submit" className="bg-muted px-6 py-24">
+      <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-          {contact.heading}
+          {submit.heading}
         </h2>
-        <p className="text-lg text-ink/70 max-w-2xl leading-relaxed mb-10">
-          {contact.body}
+        <p className="text-lg text-ink/70 leading-relaxed mb-10">
+          {submit.body}
         </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-2">
-            <p className="text-sm font-medium uppercase tracking-wider text-ink/50">
-              Email
-            </p>
-            <a
-              href={`mailto:${contact.email}`}
-              className="block text-lg text-accent hover:underline"
-            >
-              {contact.email}
-            </a>
-            <p className="text-sm font-medium uppercase tracking-wider text-ink/50 pt-4">
-              Phone
-            </p>
-            <p className="text-lg">{contact.phone}</p>
-          </div>
-          <div className="space-y-2">
-            <p className="text-sm font-medium uppercase tracking-wider text-ink/50">
-              Hours
-            </p>
-            <p className="text-lg">{contact.hours}</p>
-            <p className="text-sm font-medium uppercase tracking-wider text-ink/50 pt-4">
-              Studio
-            </p>
-            <p className="text-lg">{contact.address}</p>
-          </div>
-        </div>
+        <a
+          href={`mailto:${submit.email}`}
+          className="inline-block px-8 py-4 bg-accent text-white rounded-full text-lg font-medium hover:opacity-90 transition"
+        >
+          ✉️ Tipp per E-Mail senden
+        </a>
+        <p className="mt-6 text-sm text-ink/50">{submit.email}</p>
       </div>
     </section>
   );
