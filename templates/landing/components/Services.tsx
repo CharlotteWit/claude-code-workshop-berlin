@@ -22,20 +22,21 @@ export function Services() {
   const [reportingFor, setReportingFor] = useState<string | null>(null);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("pump-statuses");
-      if (stored) setStatuses(JSON.parse(stored));
-    } catch {}
+    fetch("/api/status")
+      .then((r) => r.json())
+      .then((data) => setStatuses(data))
+      .catch(() => {});
   }, []);
 
   const reportStatus = (name: string, status: PumpStatus) => {
-    const updated = {
-      ...statuses,
-      [name]: { status, date: new Date().toLocaleDateString("de-DE") },
-    };
-    setStatuses(updated);
-    localStorage.setItem("pump-statuses", JSON.stringify(updated));
+    const date = new Date().toLocaleDateString("de-DE");
+    setStatuses((prev) => ({ ...prev, [name]: { status, date } }));
     setReportingFor(null);
+    fetch("/api/status", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, status }),
+    }).catch(() => {});
   };
 
   const filtered = playgrounds.items.filter((p) => {
